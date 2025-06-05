@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('./controllers/userController');
-const reminderController = require('./controllers/reminderController');
+const userController = require('../controllers/userController');
+const reminderController = require('../controllers/reminderController');
 
 // Rutas de usuario
 router.post('/register', userController.newUser);

@@ -14,7 +14,7 @@ exports.deleteReminder = (req, res) => {
     res.json({ mensaje: 'Funcionalidad en desarrollo' });
 };
 
-exports.listReminder = (req, res) => {
+exports.listReminders = (req, res) => {
     // Implementación aquí...
     res.json({ mensaje: 'Funcionalidad en desarrollo' });
 };

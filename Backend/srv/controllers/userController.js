@@ -6,6 +6,12 @@ if (!fs.existsSync(userDir)) {
     fs.mkdirSync(userDir);
 }
 
+// Función para iniciar sesión
+exports.login = (req, res) => {
+    res.json({ mensaje: 'Funcionalidad en desarrollo' });
+};
+
+// Función para registrar un nuevo usuario
 exports.newUser = (req, res) => {
     const { user, nombre, correo, contrasena } = req.body;
     if (!user || !nombre || !correo || !contrasena) {
