@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agregar Recordatorio de Cumpleaños</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    
+    <h1>Agregar Recordatorio de Cumpleaños</h1>
+    <form id="formAddReminder">
+        <label for="nombreContacto">Nombre completo del contacto:</label><br>
+        <input type="text" id="nombreContacto" name="nombreContacto" required><br><br>
+
+        <label for="fechaCumpleanos">Fecha de cumpleaños:</label><br>
+        <input type="date" id="fechaCumpleanos" name="fechaCumpleanos" required><br><br>
+
+        <label for="nota">Nota (opcional):</label><br>
+        <input type="text" id="nota" name="nota"><br><br>
+
+        <button type="submit">Agregar Recordatorio</button>
+    </form>
+    <div id="mensaje"></div>
+    <script src="../js/addReminder.js"></script>
 </body>
 </html>

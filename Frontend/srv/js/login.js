@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           const user = correo.split("@")[0]; // <--- Agregado
           localStorage.setItem("usuario", user);
+          localStorage.setItem("nombreUsuario", resultado.nombre); 
           window.location.href = "srv/pages/listReminders.html";
         }, 1200);
       } else {
