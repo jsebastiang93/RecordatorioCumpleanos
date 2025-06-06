@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     try {
       const respuesta = await fetch(
-        `http://localhost:3000/api/listReminders/${usuario}`
+        `https://backend-recordatorio-cumpleanos.vercel.app/api/listReminders/${usuario}`
       );
       if (!respuesta.ok) throw new Error("Error al obtener los recordatorios");
       const recordatorios = await respuesta.json();
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           if (confirm("¿Seguro que deseas eliminar este recordatorio?")) {
             try {
               const respuesta = await fetch(
-                `http://localhost:3000/api/deleteReminder/${recordatorio.id}`,
+                `https://backend-recordatorio-cumpleanos.vercel.app/api/deleteReminder/${recordatorio.id}`,
                 {
                   method: "DELETE",
                   headers: {

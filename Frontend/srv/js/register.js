@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const respuesta = await fetch('http://localhost:3000/api/register', {
+            const respuesta = await fetch('https://backend-recordatorio-cumpleanos.vercel.app/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
