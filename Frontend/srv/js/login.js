@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const respuesta = await fetch("https://backend-recordatorio-cumpleanos.vercel.app/api/login", {
+      const respuesta = await fetch("https://backend-recordatoriocumpleanos.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
