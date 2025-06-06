@@ -4,5 +4,24 @@
   "nombre": "Juan Sebastian Gutierrez",
   "email": "sebasguti93@mail.com",
   "password": "e10adc3949ba59abbe56e057f20f883e",
-  "recordatorios": []
+   "recordatorios": [
+    {
+      "id": 1,
+      "nombreContacto": "María López",
+      "fechaCumpleanos": "1995-06-10",
+      "nota": "Amiga de la universidad"
+    },
+    {
+      "id": 2,
+      "nombreContacto": "Carlos Pérez",
+      "fechaCumpleanos": "1990-12-25",
+      "nota": "Compañero de trabajo"
+    },
+    {
+      "id": 3,
+      "nombreContacto": "Ana Torres",
+      "fechaCumpleanos": "1988-03-15",
+      "nota": ""
+    }
+  ]
 }
