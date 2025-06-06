@@ -1,19 +1,19 @@
 {
-  "id": 1749131254989,
-  "usuario": "sebasguti93",
-  "nombre": "Juan Sebastian Gutierrez",
-  "email": "sebasguti93@mail.com",
+  "id": 1749241378428,
+  "usuario": "mauricio.buendia01",
+  "nombre": "Mauricio Buendía",
+  "email": "mauricio.buendia01@unicatolica.edu.co",
   "password": "81dc9bdb52d04dc20036dbd8313ed055",
   "recordatorios": [
     {
       "id": 1,
-      "nombreContacto": "María López",
+      "nombreContacto": "Josefina Fernandez",
       "fechaCumpleanos": "1995-06-07",
       "nota": "Amiga de la universidad"
     },
     {
       "id": 2,
-      "nombreContacto": "Carlos Pérez",
+      "nombreContacto": "Carlos Ramirez",
       "fechaCumpleanos": "1990-08-15",
       "nota": "Compañero de trabajo"
     },
@@ -25,13 +25,13 @@
     },
     {
       "id": 4,
-      "nombreContacto": "Luis Gómez",
+      "nombreContacto": "Luis Gomez",
       "fechaCumpleanos": "1992-06-07",
       "nota": "Amigo de la infancia"
     },
     {
       "id": 5,
-      "nombreContacto": "Sofía Martínez",
+      "nombreContacto": "Sofia Martinez",
       "fechaCumpleanos": "1994-11-30",
       "nota": "Vecina"
     }
