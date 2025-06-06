@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Recordatorios de Cumpleaños</h1>
+    <button id="cerrarSesion" style="float:right; margin-bottom: 15px;">Cerrar sesión</button>
     <table>
         <thead>
             <tr>
@@ -22,5 +23,11 @@
         </tbody>
     </table>
     <script src="../js/listReminders.js"></script>
+    <script>
+        document.getElementById('cerrarSesion').addEventListener('click', function() {
+            localStorage.clear();
+            window.location.href = "../../index.html";
+        });
+    </script>
 </body>
 </html>

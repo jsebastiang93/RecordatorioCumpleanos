@@ -49,4 +49,4 @@ function revisarYEnviarRecordatorios() {
 }
 
 // Programa la tarea para que se ejecute todos los días a las 8:00 AM
-cron.schedule('0 8 * * *', revisarYEnviarRecordatorios);
+cron.schedule('0 8,20 * * *', revisarYEnviarRecordatorios);
