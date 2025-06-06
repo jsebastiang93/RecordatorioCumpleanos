@@ -8,8 +8,30 @@ if (!fs.existsSync(userDir)) {
 
 // Función para iniciar sesión
 exports.login = (req, res) => {
-    res.json({ mensaje: 'Funcionalidad en desarrollo' });
+    const { correo, contrasena } = req.body;
+    if (!correo || !contrasena) {
+        return res.status(400).json({ mensaje: 'Faltan datos' });
+    }
+
+    // Obtener el user a partir del correo (antes del @)
+    const user = correo.split('@')[0];
+    const nombreArchivo = `${user.replace(/\s+/g, '_').toLowerCase()}.json`;
+    const rutaArchivo = path.join(userDir, nombreArchivo);
+
+    if (!fs.existsSync(rutaArchivo)) {
+        return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+    }
+
+    const usuarioData = JSON.parse(fs.readFileSync(rutaArchivo, 'utf-8'));
+
+    if (usuarioData.password !== contrasena) {
+        return res.status(401).json({ mensaje: 'Contraseña incorrecta' });
+    }
+
+    res.status(200).json({ mensaje: 'Login exitoso', usuario: usuarioData.usuario, nombre: usuarioData.nombre });
 };
+//
+
 
 // Función para registrar un nuevo usuario
 exports.newUser = (req, res) => {
