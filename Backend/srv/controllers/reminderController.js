@@ -3,8 +3,35 @@ const path = require('path');
 const userDir = path.join(__dirname, '../model/users');
 
 exports.editReminder = (req, res) => {
-    // Implementación aquí...
-    res.json({ mensaje: 'Funcionalidad en desarrollo' });
+    const { usuario, nombreContacto, fechaCumpleanos, nota } = req.body;
+    const reminderId = req.params.id;
+
+    if (!usuario || !reminderId || !nombreContacto || !fechaCumpleanos) {
+        return res.status(400).json({ mensaje: 'Faltan datos obligatorios' });
+    }
+
+    const nombreArchivo = `${usuario.replace(/\s+/g, '_').toLowerCase()}.json`;
+    const rutaArchivo = path.join(userDir, nombreArchivo);
+
+    if (!fs.existsSync(rutaArchivo)) {
+        return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+    }
+
+    const usuarioData = JSON.parse(fs.readFileSync(rutaArchivo, 'utf-8'));
+    const recordatorios = usuarioData.recordatorios || [];
+
+    const indice = recordatorios.findIndex(r => String(r.id) === String(reminderId));
+    if (indice === -1) {
+        return res.status(404).json({ mensaje: 'Recordatorio no encontrado' });
+    }
+
+    // Actualizar los datos del recordatorio
+    recordatorios[indice].nombreContacto = nombreContacto;
+    recordatorios[indice].fechaCumpleanos = fechaCumpleanos;
+    recordatorios[indice].nota = nota || "";
+
+    fs.writeFileSync(rutaArchivo, JSON.stringify(usuarioData, null, 2));
+    res.status(200).json({ mensaje: 'Recordatorio editado correctamente', recordatorio: recordatorios[indice] });
 };
 
 
