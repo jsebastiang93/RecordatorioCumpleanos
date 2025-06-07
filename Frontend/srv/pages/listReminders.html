@@ -10,6 +10,8 @@
     <h1>Recordatorios de Cumpleaños</h1>
     <p id="saludoUsuario"></p>
     <button id="cerrarSesion" style="float:right; margin-bottom: 15px;">Cerrar sesión</button>
+    <button id="nuevoRecordatorio" style="margin-bottom: 15px;">➕ Nuevo recordatorio</button>
+
     <table>
         <thead>
             <tr>
@@ -29,6 +31,9 @@
             localStorage.clear();
             window.location.href = "../../index.html";
         });
+        document.getElementById('nuevoRecordatorio').addEventListener('click', function() {
+        window.location.href = "addReminder.html";
+    });
     </script>
 </body>
 </html>
