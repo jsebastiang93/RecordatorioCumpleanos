@@ -9,6 +9,9 @@ app.use(cors());
 app.use(express.json());
 app.use('/api', routes);
 
+// Inicializa el cronjob de recordatorios por email
+require('./srv/services/emailReminderService');
+
 app.listen(PORT, () => {
     console.log(`Servidor backend escuchando en http://localhost:${PORT}`);
 });
