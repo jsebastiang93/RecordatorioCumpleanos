@@ -14,7 +14,7 @@ https://docs.google.com/document/d/1bsZKzVCKmGLmAUKjgdKYd5gr3GeykOPf/edit?usp=sh
 1. Instalar las dependencias de desarrollo para el proyecto ubicándose en la carpeta Backend: 
 npm install
 
-2. Inicializar desde la carpeta Backend/ el proyecto: npm start
+2. Inicializar desde la carpeta Backend/ el proyecto (solo en branch/developer): npm start
 Debe visualizarse el mensaje:
 
 Servidor backend escuchando en http://localhost:3000
