@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
         try {
-            const respuesta = await fetch(`http://localhost:3000/api/listReminders/${usuario}`);
+            const respuesta = await fetch(`https://backend-recordatoriocumpleanos.onrender.com/api/listReminders/${usuario}`);
             const recordatorios = await respuesta.json();
             const recordatorio = recordatorios.find(r => String(r.id) === String(id));
             if (!recordatorio) {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         };
 
         try {
-            const respuesta = await fetch(`http://localhost:3000/api/editReminder/${id}`, {
+            const respuesta = await fetch(`https://backend-recordatoriocumpleanos.onrender.com/api/editReminder/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

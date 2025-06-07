@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const respuesta = await fetch('http://localhost:3000/api/newReminder', {
+            const respuesta = await fetch('https://backend-recordatoriocumpleanos.onrender.com/api/newReminder', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
